@@ -1,0 +1,239 @@
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/logo.png" alt="logo" />
+      </a>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/']" routerLinkActive="text-primary" aria-current="page"
+              href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- <section class="home-section" [ngStyle]="{'background-image': 'url(' + bannerImage + ')'}">
+
+  <div class="banner_content">
+    <div class="container">
+      <div class="banner-text">
+        <div class="play-icon">
+          <a href="javascript:;">
+            <div>
+              <i class="fa fa-play"></i>
+            </div>
+            <h4 class="font-400 mb-0">Watch Now</h4>
+          </a>
+        </div>
+        <h1 class="mb-3 text-center">{{channelDetail?.brandingSettings?.channel?.title}}</h1>
+        <ul class="list-inline mb-4">
+          <li><span class="text-primary"><b>{{channelDetail?.statistics?.subscriberCount}}</b></span> Subscripers</li>
+          <li><button class="btn btn-sm btn-primary">Gaming</button></li>
+          <li> <span class="text-primary"><b>{{channelDetail?.statistics?.videoCount}}</b></span> Videos</li>
+        </ul>
+        <p class="text-center font-18">{{channelDetail?.brandingSettings?.channel?.description}}</p>
+
+      </div>
+    </div>
+  </div>
+</section> -->
+<div [@routerTransition]>
+  <section class="homes-section">
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="homeConfig">
+      <div ngxSlickItem class="slide">
+        <div class="home-section" [ngStyle]="{'background-image': 'url(' + bannerImage + ')'}">
+          <div class="banner_content">
+            <div class="container">
+              <div class="banner-text">
+                <div class="play-icon">
+                  <a href="javascript:;" (click)="openVideo('BPPC7D4Ya-E', true)">
+                    <div>
+                      <i class="fa fa-play"></i>
+                    </div>
+                    <h4 class="font-400 mb-0">Watch Now</h4>
+                  </a>
+                </div>
+                <h1 class="mb-3 text-center">{{channelDetail?.brandingSettings?.channel?.title}}</h1>
+                <ul class="list-inline mb-4">
+                  <li><span class="text-primary"><b>{{channelDetail?.statistics?.subscriberCount}}</b></span>
+                    Subscripers
+                  </li>
+                  <li><button class="btn btn-sm btn-primary">Gaming</button></li>
+                  <li> <span class="text-primary"><b>{{channelDetail?.statistics?.videoCount}}</b></span> Videos</li>
+                </ul>
+                <p class="text-center font-18">{{channelDetail?.brandingSettings?.channel?.description}}</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div ngxSlickItem class="slide">
+        <div class="home-section" [ngStyle]="{'background-image': 'url(' + pubg + ')'}">
+          <div class="banner_content">
+            <div class="container">
+              <div class="banner-text">
+                <div class="play-icon">
+                  <a href="javascript:;"  (click)="openVideo('RtBNw617eVI', true)">
+                    <div>
+                      <i class="fa fa-play"></i>
+                    </div>
+                    <h4 class="font-400 mb-0">Watch Now</h4>
+                  </a>
+                </div>
+                <!-- <h1 class="mb-3 text-center">{{channelDetail?.brandingSettings?.channel?.title}}</h1>
+              <ul class="list-inline mb-4">
+                <li><span class="text-primary"><b>{{channelDetail?.statistics?.subscriberCount}}</b></span> Subscripers
+                </li>
+                <li><button class="btn btn-sm btn-primary">Gaming</button></li>
+                <li> <span class="text-primary"><b>{{channelDetail?.statistics?.videoCount}}</b></span> Videos</li>
+              </ul>
+              <p class="text-center font-18">{{channelDetail?.brandingSettings?.channel?.description}}</p> -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div ngxSlickItem class="slide">
+        <div class="home-section" [ngStyle]="{'background-image': 'url(' + call + ')'}">
+          <div class="banner_content">
+            <div class="container">
+              <div class="banner-text">
+                <div class="play-icon">
+                  <a href="javascript:;" (click)="openVideo('RtBNw617eVI', true)">
+                    <div>
+                      <i class="fa fa-play"></i>
+                    </div>
+                    <h4 class="font-400 mb-0">Watch Now</h4>
+                  </a>
+                </div>
+                <!-- <h1 class="mb-3 text-center">{{channelDetail?.brandingSettings?.channel?.title}}</h1>
+              <ul class="list-inline mb-4">
+                <li><span class="text-primary"><b>{{channelDetail?.statistics?.subscriberCount}}</b></span> Subscripers
+                </li>
+                <li><button class="btn btn-sm btn-primary">Gaming</button></li>
+                <li> <span class="text-primary"><b>{{channelDetail?.statistics?.videoCount}}</b></span> Videos</li>
+              </ul>
+              <p class="text-center font-18">{{channelDetail?.brandingSettings?.channel?.description}}</p> -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ngx-slick-carousel>
+  </section>
+  <section class="pubg-section pt-5">
+    <div class="container">
+      <div class="row mb-4 align-items-center">
+        <div class="col-md-6">
+          <h5 class="mb-0 text-white">Carrom Playlist</h5>
+        </div>
+        <div class="col-md-6 text-end">
+          <button class="btn btn-primary">More Videos</button>
+        </div>
+      </div>
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="carromConfig">
+        <div ngxSlickItem *ngFor="let item of carromList" class="slide">
+          <div class="playlist-card me-3">
+            <div class="playlist-img">
+              <img src="{{item?.snippet?.thumbnails?.maxres?.url}}" alt="">
+              <div class="playlist-buttton">
+                <button class="btn btn-primary" (click)="gotoVideo(item)"><i class="fa fa-play"></i></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h6 class="text-white">{{item?.snippet?.title}}</h6>
+              <ul class="list-inline d-flex">
+                <li class="font-12 me-3"><span class="text-white">{{item?.snippet?.publishedAt | date}}</span></li>
+                <li class="font-12"> <span class="text-primary">Public</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </ngx-slick-carousel>
+
+    </div>
+
+  </section>
+  <section class="pubg-section pt-5">
+    <div class="container">
+      <div class="row mb-4 align-items-center">
+        <div class="col-md-6">
+          <h5 class="mb-0 text-white">Latest Videos</h5>
+        </div>
+        <div class="col-md-6 text-end">
+          <button class="btn btn-primary">More Videos</button>
+        </div>
+      </div>
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="latestConfig">
+        <div ngxSlickItem *ngFor="let item of carromList" class="slide">
+          <div class="playlist-card">
+            <div class="playlist-img">
+              <img src="{{item?.snippet?.thumbnails?.maxres?.url}}" alt="">
+              <div class="playlist-buttton">
+                <button class="btn btn-primary" (click)="gotoVideo(item)"><i class="fa fa-play"></i></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h6 class="text-white">{{item?.snippet?.title}}</h6>
+              <ul class="list-inline d-flex">
+                <li class="font-12 me-3"><span class="text-white">{{item?.snippet?.publishedAt | date}}</span></li>
+                <li class="font-12"> <span class="text-primary">Public</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </ngx-slick-carousel>
+
+    </div>
+
+  </section>
+  <section class="pubg-section pt-5 pb-5">
+    <div class="container">
+      <div class="row mb-4 align-items-center">
+        <div class="col-md-6">
+          <h5 class="mb-0 text-white">Pubg Playlist</h5>
+        </div>
+        <div class="col-md-6 text-end">
+          <button class="btn btn-primary">More Videos</button>
+        </div>
+      </div>
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="pubgConfig">
+        <div ngxSlickItem *ngFor="let item of playList" class="slide">
+          <div class="playlist-card me-3">
+            <div class="playlist-img">
+              <img src="{{item?.snippet?.thumbnails?.maxres?.url}}" alt="">
+              <div class="playlist-buttton">
+                <button class="btn btn-primary" (click)="gotoVideo(item)"><i class="fa fa-play"></i></button>
+              </div>
+            </div>
+            <div class="card-body">
+              <h6 class="text-white">{{item?.snippet?.title | slice:20: 49}}</h6>
+              <ul class="list-inline d-flex">
+                <li class="font-12 me-3"><span class="text-white">{{item?.snippet?.publishedAt | date}}</span></li>
+                <li class="font-12"> <span class="text-primary">Public</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </ngx-slick-carousel>
+
+    </div>
+
+  </section>
+</div>
